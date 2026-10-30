@@ -1,0 +1,66 @@
+[
+  {
+    "id": "label-01",
+    "sourceId": "pmkisan-home",
+    "text": "Hon'ble Prime Minister released the 22nd instalment of PM KISAN scheme on 13th March 2026. All eligible farmers received Rs 2000.",
+    "fields": [
+      {
+        "name": "instalment_date",
+        "value": "13th March 2026",
+        "evidence": "Hon'ble Prime Minister released the 22nd instalment of PM KISAN scheme on 13th March 2026."
+      },
+      {
+        "name": "amount",
+        "value": "Rs 2000",
+        "evidence": "All eligible farmers received Rs 2000."
+      }
+    ]
+  },
+  {
+    "id": "label-02",
+    "sourceId": "pmkisan-home",
+    "text": "eKYC is MANDATORY for PMKISAN Registered Farmers. OTP Based eKYC is available on PMKISAN Portal. Last date extended to 30/11/2026.",
+    "fields": [
+      {
+        "name": "requirement",
+        "value": "eKYC is MANDATORY",
+        "evidence": "eKYC is MANDATORY for PMKISAN Registered Farmers."
+      },
+      {
+        "name": "last_date",
+        "value": "30/11/2026",
+        "evidence": "Last date extended to 30/11/2026."
+      }
+    ]
+  },
+  {
+    "id": "label-03",
+    "sourceId": "pmfby-portal",
+    "text": "Pradhan Mantri Fasal Bima Yojana: Cut-off date for enrolment of Rabi 2026-27 season crops in Maharashtra is 31 Dec 2026. Farmer premium share is 1.5%.",
+    "fields": [
+      {
+        "name": "last_date",
+        "value": "31 Dec 2026",
+        "evidence": "Cut-off date for enrolment of Rabi 2026-27 season crops in Maharashtra is 31 Dec 2026."
+      },
+      {
+        "name": "premium",
+        "value": "1.5%",
+        "evidence": "Farmer premium share is 1.5%."
+      }
+    ]
+  },
+  {
+    "id": "label-04",
+    "sourceId": "pib-agri",
+    "text": "Government releases financial assistance of ₹6,000 under PM Kisan Samman Nidhi to 9.5 crore beneficiary farmers.",
+    "fields": [
+      {
+        "name": "amount",
+        "value": "₹6,000",
+        "evidence": "Government releases financial assistance of ₹6,000 under PM Kisan Samman Nidhi to 9.5 crore beneficiary farmers."
+      }
+    ]
+  }
+]
+

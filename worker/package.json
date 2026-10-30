@@ -1,0 +1,23 @@
+{
+  "name": "shetkari-suchnasetu-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Notice change detection worker for Shetkari SuchnaSetu",
+  "main": "run.mjs",
+  "scripts": {
+    "start": "node run.mjs",
+    "watch": "node run.mjs --watch",
+    "probe": "node probe.mjs",
+    "seed": "node seed.mjs",
+    "eval": "node ../eval/run-eval.mjs"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.48.0",
+    "cheerio": "^1.0.0",
+    "diff": "^7.0.0",
+    "dotenv": "^16.4.7",
+    "fast-xml-parser": "^4.5.1",
+    "pdf-parse": "^1.1.1"
+  }
+}

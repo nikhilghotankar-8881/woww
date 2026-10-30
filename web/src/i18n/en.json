@@ -1,0 +1,109 @@
+{
+  "appName": "Shetkari SuchnaSetu",
+  "appTagline": "Official Notice Change Monitor for Farmers",
+  "nav": {
+    "schemes": "Schemes",
+    "profile": "My Profile",
+    "matches": "My Matches",
+    "alerts": "Alerts",
+    "admin": "Review Queue",
+    "sources": "Source Health",
+    "evaluation": "Evaluation",
+    "login": "Sign In",
+    "logout": "Sign Out"
+  },
+  "footer": {
+    "honesty": "Information here is monitored from official sources at scheduled intervals and reviewed by a person before it is shown. It can be late or wrong. It is not an official determination of eligibility. Always confirm on the official portal linked in each alert.",
+    "notOfficial": "Not an official government website • Prototype for verified change detection",
+    "privacy": "Privacy First: We never collect Aadhaar, bank credentials, or caste data."
+  },
+  "schemes": {
+    "title": "Government Schemes & Opportunities",
+    "subtitle": "Fact-checked agricultural schemes with primary source provenance badges.",
+    "viewDetails": "View Details & Sources",
+    "officialSource": "Open Official Source",
+    "verifiedFacts": "Verified Facts",
+    "steps": "Application Steps",
+    "documents": "Required Documents"
+  },
+  "badges": {
+    "verified": "Verified from primary official source",
+    "unverified": "Secondary source / unverified",
+    "conflict": "Sources disagree (recorded conflict)"
+  },
+  "match": {
+    "title": "My Matching Schemes",
+    "subtitle": "Rule-based determination based on your land, crop, and registration details.",
+    "may_apply": "May apply",
+    "not_matching": "Doesn't meet stated criteria",
+    "need_info": "Need more info",
+    "note": "We never state 'eligible'. Determinations are rule-based guides."
+  },
+  "alerts": {
+    "title": "Notice Alerts & Change Diffs",
+    "subtitle": "Updates detected on official pages, verified by human reviewers before delivery.",
+    "noAlerts": "No alerts yet. Approved changes matching your profile will appear here in real-time.",
+    "simulation": "SIMULATION / TEST DATA",
+    "markRead": "Mark as read",
+    "read": "Read",
+    "publishedAt": "Published",
+    "checkedAt": "Checked at",
+    "openSource": "Verify on official portal"
+  },
+  "admin": {
+    "title": "Human Reviewer Queue",
+    "subtitle": "Changes detected by the crawler requiring manual verification and approval before fan-out.",
+    "pending": "Pending Review",
+    "approve": "Approve & Fan Out",
+    "reject": "Reject Change",
+    "reviewNote": "Optional reviewer notes",
+    "grounded": "Grounded (Verbatim Evidence Confirmed)",
+    "ungrounded": "Ungrounded (Evidence Text Missing)",
+    "conflict": "Data Conflict Detected",
+    "emptyQueue": "Queue is clear. No changes waiting for review."
+  },
+  "profile": {
+    "title": "Farmer Profile",
+    "subtitle": "Configure your farm details to receive targeted notice alerts.",
+    "district": "District",
+    "crops": "Crops Grown",
+    "landStatus": "Land Status",
+    "owner": "Land Owner",
+    "tenant": "Tenant / Sharecropper",
+    "landless": "Agricultural Laborer / Landless",
+    "landCutoff": "Was land registered on or before 1 Feb 2019?",
+    "loanee": "Do you hold an active Kisan Credit Card / Crop Loan (Loanee)?",
+    "ekyc": "PM-KISAN e-KYC Completion Status",
+    "yes": "Yes",
+    "no": "No",
+    "unsure": "Unsure / Need to check",
+    "season": "Current Farming Season",
+    "kharif": "Kharif",
+    "rabi": "Rabi",
+    "both": "Both Seasons",
+    "phone": "Phone Number (Optional for future SMS alerts)",
+    "save": "Save Profile",
+    "deleteData": "Delete My Data (Privacy Compliance)",
+    "deleteConfirm": "Are you sure? This will permanently delete your profile and all received alerts."
+  },
+  "sources": {
+    "title": "Monitored Sources & Pipeline Health",
+    "subtitle": "Transparency dashboard showing live crawler status and last inspection times.",
+    "lastChecked": "Last checked",
+    "mode": "Mode",
+    "auto": "Automated (Hourly)",
+    "manual": "Manual Review Only",
+    "status": "Status",
+    "conflictLedger": "Public Conflict Ledger"
+  },
+  "eval": {
+    "title": "System Accuracy & Evaluation",
+    "subtitle": "Empirical measurements from eval/run-eval.mjs. Real metrics with honest sample sizes (n).",
+    "empty": "No evaluation runs recorded yet. Execute `npm run eval` in worker/ to generate benchmarks.",
+    "extractionTitle": "Field Extraction Accuracy (E1)",
+    "detectionTitle": "Change Detection Precision & Recall (E2)",
+    "matchingTitle": "Matching Rule Implementation Fidelity (E4)",
+    "latencyTitle": "Pipeline Processing Latency (E3)"
+  }
+}
+

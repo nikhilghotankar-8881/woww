@@ -1,0 +1,23 @@
+{
+  "sourceId": "pmkisan-home",
+  "pairs": [
+    {
+      "from": "01.html",
+      "to": "02.html",
+      "origin": "synthetic",
+      "capturedAt": "2026-10-30T08:00:00Z",
+      "expectedMaterial": true,
+      "expectedFields": [
+        {
+          "name": "instalment_date",
+          "value": "13th March 2026"
+        },
+        {
+          "name": "last_date",
+          "value": "31-12-2026"
+        }
+      ]
+    }
+  ]
+}
+

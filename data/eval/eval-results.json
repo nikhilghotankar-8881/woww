@@ -1,0 +1,85 @@
+[
+  {
+    "type": "extraction",
+    "corpus_version": "v1.0",
+    "n": 7,
+    "synthetic": false,
+    "metrics": {
+      "accuracy": 0.857,
+      "groundingPassRate": 1,
+      "interval": [
+        0.487,
+        0.974
+      ],
+      "byField": {
+        "instalment_date": {
+          "total": 1,
+          "matched": 1
+        },
+        "amount": {
+          "total": 2,
+          "matched": 2
+        },
+        "requirement": {
+          "total": 1,
+          "matched": 0
+        },
+        "last_date": {
+          "total": 2,
+          "matched": 2
+        },
+        "premium": {
+          "total": 1,
+          "matched": 1
+        }
+      }
+    },
+    "notes": "Hand-labelled primary notice excerpts evaluated with deterministic extractor.",
+    "git_sha": "local"
+  },
+  {
+    "type": "detection",
+    "corpus_version": "v1.0",
+    "n": 1,
+    "synthetic": true,
+    "metrics": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "notes": "Replay snapshot pair with baseline and simulated material change.",
+    "git_sha": "local"
+  },
+  {
+    "type": "latency",
+    "corpus_version": "v1.0",
+    "n": 20,
+    "synthetic": true,
+    "metrics": {
+      "medianMs": 1.28,
+      "p95Ms": 3.72
+    },
+    "notes": "In-memory benchmark for normalize->diff->classify->extract->ground pipeline (excludes network I/O).",
+    "git_sha": "local"
+  },
+  {
+    "type": "matching",
+    "corpus_version": "v1.0",
+    "n": 36,
+    "synthetic": true,
+    "metrics": {
+      "agreementRate": 1,
+      "perScheme": {
+        "pm-kisan": 1,
+        "nsmny": 1,
+        "pmfby": 1
+      }
+    },
+    "notes": "Synthetic edge-case profiles verified against PRD decision tables.",
+    "git_sha": "local"
+  }
+]

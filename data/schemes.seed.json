@@ -1,0 +1,315 @@
+[
+  {
+    "id": "pm-kisan",
+    "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+    "name_mr": "प्रधानमंत्री किसान सन्मान निधी",
+    "name_hi": "प्रधानमंत्री किसान सम्मान निधि",
+    "category": "income-support",
+    "level": "central",
+    "nodal_body": "Ministry of Agriculture & Farmers Welfare, GoI",
+    "rule_set": "pm-kisan",
+    "facts": {
+      "annual_benefit": {
+        "value": "₹6,000 per year in three equal instalments of ₹2,000 directly transferred to bank accounts.",
+        "sourceUrl": "https://pmkisan.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "ekyc_mandatory": {
+        "value": "e-KYC is mandatory for all PM-KISAN registered farmers. OTP-based e-KYC available on PMKISAN Portal or biometric at nearest CSC centres.",
+        "sourceUrl": "https://pmkisan.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "landholding_eligibility": {
+        "value": "All landholding farmer families with cultivable land in their names are eligible (institutional landholders and defined exclusion criteria apply).",
+        "sourceUrl": "https://pmkisan.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "land_cut_off_date": {
+        "value": "Land ownership transfer cut-off date is 01-02-2019. Land acquired after this date is subject to physical verification (exceptions for inheritance upon death of landowner).",
+        "sourceUrl": "https://pmkisan.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "latest_instalment": {
+        "value": "Official portal lists 22nd instalment released 13 Mar 2026; secondary news reported 23rd instalment in Jun 2026.",
+        "sourceUrl": "https://pmkisan.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "conflict"
+      },
+      "helpline": {
+        "value": "Toll Free Helpline: 155261 / 011-24300606",
+        "sourceUrl": "https://pmkisan.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      }
+    },
+    "documents": [
+      "Aadhaar Card linked with active bank account",
+      "Landholding records (7/12 extract / 8A extract in Maharashtra)",
+      "Bank Account details with active DBT"
+    ],
+    "steps": [
+      "Visit pmkisan.gov.in or CSC Center",
+      "Verify Aadhaar and complete biometric / OTP e-KYC",
+      "Ensure land records are linked with your PM-KISAN beneficiary status"
+    ],
+    "official_links": [
+      {
+        "label": "PM-KISAN Official Portal",
+        "url": "https://pmkisan.gov.in/"
+      },
+      {
+        "label": "Know Your Status Portal",
+        "url": "https://pmkisan.gov.in/BeneficiaryStatus_New.aspx"
+      }
+    ],
+    "summary_mr": {
+      "text": "शेतकरी कुटुंबांसाठी वार्षिक ₹६,००० चे उत्पन्न सहाय्य (३ समान हप्त्यांमध्ये). ई-केवायसी आणि बँक खात्याशी आधार जोडणी अनिवार्य आहे.",
+      "reviewedBy": "Marathi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    },
+    "summary_hi": {
+      "text": "पात्र किसान परिवारों को प्रति वर्ष ₹6,000 की वित्तीय सहायता (3 किस्तों में)। ई-केवाईसी और बैंक खाते से आधार लिंक होना अनिवार्य है।",
+      "reviewedBy": "Hindi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    }
+  },
+  {
+    "id": "nsmny",
+    "name": "Namo Shetkari Mahasanman Nidhi Yojana (NSMNY)",
+    "name_mr": "नमो शेतकरी महासन्मान निधी योजना",
+    "name_hi": "नमो शेतकरी महासम्मान निधि योजना",
+    "category": "income-support",
+    "level": "state",
+    "nodal_body": "Department of Agriculture, Government of Maharashtra",
+    "rule_set": "nsmny",
+    "facts": {
+      "annual_benefit": {
+        "value": "Government of Maharashtra provides ₹6,000 per year (3 instalments of ₹2,000). A news wire cited proposal for increase to ₹9,000 (unresolved GR).",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "conflict"
+      },
+      "link_to_pmkisan": {
+        "value": "Beneficiaries must be actively approved and registered under PM-KISAN in Maharashtra. No separate registration required.",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "helpline": {
+        "value": "Maharashtra Kisan Helpline: 1800-233-4000",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": null,
+        "verifiedBy": null,
+        "status": "unverified"
+      }
+    },
+    "documents": [
+      "PM-KISAN active registration number",
+      "Aadhaar-seeded bank account in Maharashtra"
+    ],
+    "steps": [
+      "Ensure eligibility and approval under PM-KISAN",
+      "Verify Aadhaar seeding status with Maharashtra agriculture department database"
+    ],
+    "official_links": [
+      {
+        "label": "MahaDBT Agriculture Portal",
+        "url": "https://mahadbt.maharashtra.gov.in/"
+      }
+    ],
+    "summary_mr": {
+      "text": "महाराष्ट्र शासनातर्फे पीएम-किसान लाभार्थ्यांना अतिरिक्त ₹६,००० वार्षिक सहाय्य थेट बँक खात्यात.",
+      "reviewedBy": "Marathi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    },
+    "summary_hi": {
+      "text": "महाराष्ट्र सरकार द्वारा पीएम-किसान लाभार्थियों को प्रति वर्ष ₹6,000 की अतिरिक्त सहायता।",
+      "reviewedBy": "Hindi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    }
+  },
+  {
+    "id": "pmfby",
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "name_mr": "प्रधानमंत्री पीक विमा योजना",
+    "name_hi": "प्रधानमंत्री फसल बीमा योजना",
+    "category": "insurance",
+    "level": "central",
+    "nodal_body": "Ministry of Agriculture & Farmers Welfare, GoI / State Dept of Agriculture",
+    "rule_set": "pmfby",
+    "facts": {
+      "farmer_premium_share": {
+        "value": "Standard farmer premium share: Kharif food/oilseeds 2%, Rabi food/oilseeds 1.5%, Commercial / Horticultural crops 5% of sum insured.",
+        "sourceUrl": "https://pmfby.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "maharashtra_one_rupee_model": {
+        "value": "The earlier ₹1 token premium scheme in Maharashtra was discontinued in 2025; standard state operational guidelines apply.",
+        "sourceUrl": "https://pmfby.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      },
+      "rabi_cutoff_date": {
+        "value": "Enrolment cut-off date is notified by the state government for each notified crop and district. Indicative cut-off is 15 Dec - 31 Dec.",
+        "sourceUrl": "https://pmfby.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "conflict"
+      },
+      "calamity_intimation": {
+        "value": "Crop loss due to localized calamity or post-harvest loss must be reported within 72 hours via Crop Insurance App or helpline 14447.",
+        "sourceUrl": "https://pmfby.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "verified"
+      }
+    },
+    "documents": [
+      "Land Record (7/12 & 8A / Land possession certificate)",
+      "Sowing Certificate / Declaration from Gram Panchayat or Patwari",
+      "Bank Passbook / account details",
+      "Tenant agreement / declaration (for non-owner farmers)"
+    ],
+    "steps": [
+      "Confirm if your crop and village are notified for the current season",
+      "Apply via Bank, CSC Center, or PMFBY portal before the season deadline",
+      "Save acknowledgment receipt and insurance policy copy"
+    ],
+    "official_links": [
+      {
+        "label": "PMFBY National Portal",
+        "url": "https://pmfby.gov.in/"
+      }
+    ],
+    "summary_mr": {
+      "text": "नैसर्गिक आपत्तींमुळे पिकांचे नुकसान झाल्यास व्यापक विमा संरक्षण. रब्बी पिकांसाठी १.५% व खरीप पिकांसाठी २% शेतकरी प्रीमियम हिस्सा.",
+      "reviewedBy": "Marathi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    },
+    "summary_hi": {
+      "text": "फसल नुकसान की स्थिति में वित्तीय सुरक्षा। रबी फसलों के लिए 1.5% और खरीफ फसलों के लिए 2% किसान प्रीमियम हिस्सा।",
+      "reviewedBy": "Hindi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    }
+  },
+  {
+    "id": "pdmc-mh",
+    "name": "Per Drop More Crop (Micro-Irrigation) — Maharashtra",
+    "name_mr": "प्रति थेंब अधिक पीक (सूक्ष्म सिंचन) — महाराष्ट्र",
+    "name_hi": "प्रति बूंद अधिक फसल (सूक्ष्म सिंचाई) — महाराष्ट्र",
+    "category": "irrigation",
+    "level": "central",
+    "nodal_body": "Ministry of Agriculture / MahaDBT Maharashtra",
+    "rule_set": null,
+    "facts": {
+      "parent_scheme": {
+        "value": "Operated under PM-RKVY (earlier under PMKSY). Provides subsidy for drip and sprinkler irrigation.",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": "2026-10-30",
+        "verifiedBy": "Shetkari SuchnaSetu Review Team",
+        "status": "conflict"
+      },
+      "application_route": {
+        "value": "Online application mandatory through Maharashtra MahaDBT Farmer Schemes portal.",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": null,
+        "verifiedBy": null,
+        "status": "unverified"
+      }
+    },
+    "documents": [
+      "7/12 extract showing water source / well / borewell",
+      "Electricity bill / source verification",
+      "Quotation from authorized micro-irrigation dealer"
+    ],
+    "steps": [
+      "Register on MahaDBT Farmer portal",
+      "Select Micro-Irrigation (Drip / Sprinkler)",
+      "Upload quotations and await lottery / pre-sanction letter"
+    ],
+    "official_links": [
+      {
+        "label": "MahaDBT Micro Irrigation",
+        "url": "https://mahadbt.maharashtra.gov.in/"
+      }
+    ],
+    "summary_mr": {
+      "text": "ठिबक व तुषार सिंचन पद्धतीसाठी शासकीय अनुदान. महाडीबीटी पोर्टलद्वारे अर्ज करणे आवश्यक.",
+      "reviewedBy": "Marathi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    },
+    "summary_hi": {
+      "text": "ड्रिप और स्प्रिंकलर सिंचाई प्रणाली पर सरकारी सब्सिडी। महाडीबीटी पोर्टल के माध्यम से आवेदन।",
+      "reviewedBy": "Hindi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    }
+  },
+  {
+    "id": "smam-mh",
+    "name": "Sub-Mission on Agricultural Mechanization (SMAM) — Maharashtra",
+    "name_mr": "कृषी यांत्रिकीकरण उप-अभियान — महाराष्ट्र",
+    "name_hi": "कृषि यंत्रीकरण उप-मिशन — महाराष्ट्र",
+    "category": "mechanization",
+    "level": "central",
+    "nodal_body": "Ministry of Agriculture / MahaDBT Maharashtra",
+    "rule_set": null,
+    "facts": {
+      "objective": {
+        "value": "Financial assistance / subsidy for procurement of agricultural equipment and farm machinery (tractors, rotavators, harvesters, etc.).",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": null,
+        "verifiedBy": null,
+        "status": "unverified"
+      },
+      "selection_mode": {
+        "value": "Computerized online lottery system conducted on MahaDBT portal for transparent allocation.",
+        "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+        "verifiedOn": null,
+        "verifiedBy": null,
+        "status": "unverified"
+      }
+    },
+    "documents": [
+      "Landholding records (7/12 & 8A)",
+      "Aadhaar Card and Caste certificate (if applicable for enhanced subsidy)",
+      "Quotation from authorized machinery dealer"
+    ],
+    "steps": [
+      "Submit application on MahaDBT Farmer Schemes",
+      "Participate in district computer lottery draw",
+      "Purchase machinery upon receiving pre-sanction and upload invoice"
+    ],
+    "official_links": [
+      {
+        "label": "MahaDBT Agriculture Mechanization",
+        "url": "https://mahadbt.maharashtra.gov.in/"
+      }
+    ],
+    "summary_mr": {
+      "text": "ट्रॅक्टर, रोटाव्हेटर व इतर कृषी अवजारांच्या खरेदीसाठी अनुदान योजना. महाडीबीटी सोडत पद्धतीने निवड.",
+      "reviewedBy": "Marathi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    },
+    "summary_hi": {
+      "text": "ट्रैक्टर, रोटावेटर और अन्य कृषि उपकरणों की खरीद पर सरकारी सहायता। महाडीबीटी लॉटरी द्वारा चयन।",
+      "reviewedBy": "Hindi Verification Lead",
+      "reviewedOn": "2026-10-30"
+    }
+  }
+]
+

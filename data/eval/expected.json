@@ -1,0 +1,63 @@
+{
+  "p01": {
+    "pm-kisan": "MAY_APPLY",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "MAY_APPLY"
+  },
+  "p02": {
+    "pm-kisan": "MAY_APPLY",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "MAY_APPLY"
+  },
+  "p03": {
+    "pm-kisan": "NOT_MATCHING",
+    "nsmny": "NOT_MATCHING",
+    "pmfby": "MAY_APPLY"
+  },
+  "p04": {
+    "pm-kisan": "NEED_INFO",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "MAY_APPLY"
+  },
+  "p05": {
+    "pm-kisan": "NEED_INFO",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "MAY_APPLY"
+  },
+  "p06": {
+    "pm-kisan": "NOT_MATCHING",
+    "nsmny": "NEED_INFO",
+    "pmfby": "MAY_APPLY"
+  },
+  "p07": {
+    "pm-kisan": "NOT_MATCHING",
+    "nsmny": "NEED_INFO",
+    "pmfby": "MAY_APPLY"
+  },
+  "p08": {
+    "pm-kisan": "MAY_APPLY",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "NEED_INFO"
+  },
+  "p09": {
+    "pm-kisan": "NOT_MATCHING",
+    "nsmny": "NEED_INFO",
+    "pmfby": "MAY_APPLY"
+  },
+  "p10": {
+    "pm-kisan": "MAY_APPLY",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "MAY_APPLY"
+  },
+  "p11": {
+    "pm-kisan": "NOT_MATCHING",
+    "nsmny": "NOT_MATCHING",
+    "pmfby": "MAY_APPLY"
+  },
+  "p12": {
+    "pm-kisan": "NEED_INFO",
+    "nsmny": "MAY_APPLY",
+    "pmfby": "MAY_APPLY"
+  }
+}
+

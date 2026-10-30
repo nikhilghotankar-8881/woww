@@ -1,0 +1,135 @@
+[
+  {
+    "id": "p01",
+    "district": "Pune",
+    "crops": ["Wheat", "Gram"],
+    "land_status": "owner",
+    "land_on_or_before_2019": true,
+    "loanee": false,
+    "ekyc_done": "yes",
+    "exclusion_applies": false,
+    "season": "rabi"
+  },
+  {
+    "id": "p02",
+    "district": "Nashik",
+    "crops": ["Onion", "Grapes"],
+    "land_status": "owner",
+    "land_on_or_before_2019": true,
+    "loanee": true,
+    "ekyc_done": "no",
+    "exclusion_applies": false,
+    "season": "rabi"
+  },
+  {
+    "id": "p03",
+    "district": "Amravati",
+    "crops": ["Cotton", "Soybean"],
+    "land_status": "landless",
+    "land_on_or_before_2019": false,
+    "loanee": false,
+    "ekyc_done": "unsure",
+    "exclusion_applies": false,
+    "season": "kharif"
+  },
+  {
+    "id": "p04",
+    "district": "Kolhapur",
+    "crops": ["Sugarcane"],
+    "land_status": "owner",
+    "land_on_or_before_2019": true,
+    "loanee": false,
+    "ekyc_done": "unsure",
+    "exclusion_applies": false,
+    "season": "rabi"
+  },
+  {
+    "id": "p05",
+    "district": "Nagpur",
+    "crops": ["Orange", "Cotton"],
+    "land_status": "owner",
+    "land_on_or_before_2019": false,
+    "loanee": true,
+    "ekyc_done": "yes",
+    "exclusion_applies": false,
+    "season": "kharif"
+  },
+  {
+    "id": "p06",
+    "district": "Satara",
+    "crops": ["Wheat", "Sugarcane"],
+    "land_status": "tenant",
+    "land_on_or_before_2019": false,
+    "loanee": false,
+    "ekyc_done": "yes",
+    "exclusion_applies": false,
+    "season": "rabi"
+  },
+  {
+    "id": "p07",
+    "district": "Solapur",
+    "crops": ["Pomegranate", "Jowar"],
+    "land_status": "owner",
+    "land_on_or_before_2019": true,
+    "loanee": false,
+    "ekyc_done": "yes",
+    "exclusion_applies": true,
+    "season": "rabi"
+  },
+  {
+    "id": "p08",
+    "district": "Latur",
+    "crops": [],
+    "land_status": "owner",
+    "land_on_or_before_2019": true,
+    "loanee": false,
+    "ekyc_done": "yes",
+    "exclusion_applies": false,
+    "season": null
+  },
+  {
+    "id": "p09",
+    "district": "Akola",
+    "crops": ["Soybean", "Tur"],
+    "land_status": "tenant",
+    "land_on_or_before_2019": false,
+    "loanee": true,
+    "ekyc_done": "no",
+    "exclusion_applies": false,
+    "season": "kharif"
+  },
+  {
+    "id": "p10",
+    "district": "Jalgaon",
+    "crops": ["Banana", "Cotton"],
+    "land_status": "owner",
+    "land_on_or_before_2019": true,
+    "loanee": false,
+    "ekyc_done": "yes",
+    "exclusion_applies": false,
+    "season": "both"
+  },
+  {
+    "id": "p11",
+    "district": "Nanded",
+    "crops": ["Gram"],
+    "land_status": "landless",
+    "land_on_or_before_2019": null,
+    "loanee": false,
+    "ekyc_done": "no",
+    "exclusion_applies": false,
+    "season": "rabi"
+  },
+  {
+    "id": "p12",
+    "district": "Sangli",
+    "crops": ["Turmeric", "Grapes"],
+    "land_status": "owner",
+    "land_on_or_before_2019": false,
+    "loanee": false,
+    "ekyc_done": "unsure",
+    "exclusion_applies": false,
+    "season": "both"
+  }
+]
+

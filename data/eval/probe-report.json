@@ -1,0 +1,68 @@
+[
+  {
+    "id": "pmkisan-home",
+    "name": "PM-KISAN National Portal Banner & Notices",
+    "url": "https://pmkisan.gov.in/",
+    "type": "page",
+    "mode": "auto",
+    "checkedAt": "2026-10-30T03:08:53.816Z",
+    "httpStatus": 0,
+    "durationMs": 20000,
+    "status": "error",
+    "error": "fetch failed"
+  },
+  {
+    "id": "pib-agri",
+    "name": "PIB Ministry of Agriculture Press Releases",
+    "url": "https://pib.gov.in/",
+    "type": "listing",
+    "mode": "auto",
+    "checkedAt": "2026-10-30T03:08:55.383Z",
+    "httpStatus": 0,
+    "durationMs": 20000,
+    "status": "error",
+    "error": "fetch failed"
+  },
+  {
+    "id": "pmfby-portal",
+    "name": "PMFBY National Crop Insurance Portal",
+    "url": "https://pmfby.gov.in/",
+    "type": "page",
+    "mode": "auto",
+    "checkedAt": "2026-10-30T03:08:56.909Z",
+    "httpStatus": 0,
+    "durationMs": 20000,
+    "status": "error",
+    "error": "fetch failed"
+  },
+  {
+    "id": "mh-agri-gr",
+    "name": "Maharashtra Department of Agriculture Government Resolutions (GR)",
+    "url": "https://krishi.maharashtra.gov.in/",
+    "type": "listing",
+    "mode": "manual",
+    "checkedAt": "2026-10-30T03:08:58.434Z",
+    "status": "manual",
+    "note": "State circulars; scanned Marathi PDFs require human reviewer validation."
+  },
+  {
+    "id": "nsmny-portal",
+    "name": "Namo Shetkari Portal",
+    "url": "https://nsmny.mahait.org/",
+    "type": "page",
+    "mode": "manual",
+    "checkedAt": "2026-10-30T03:08:58.434Z",
+    "status": "manual",
+    "note": "Domain verification ongoing; marked manual until permanent endpoint is locked."
+  },
+  {
+    "id": "mahadbt-public",
+    "name": "MahaDBT Farmer Schemes Public Portal",
+    "url": "https://mahadbt.maharashtra.gov.in/",
+    "type": "page",
+    "mode": "manual",
+    "checkedAt": "2026-10-30T03:08:58.434Z",
+    "status": "manual",
+    "note": "Direct application route. Monitored in link-only mode without automated scraping."
+  }
+]
