@@ -81,7 +81,10 @@
     "kharif": "Kharif",
     "rabi": "Rabi",
     "both": "Both Seasons",
-    "phone": "Phone Number (Optional for future SMS alerts)",
+    "phone": "Mobile Number",
+    "phoneHelp": "Used for instant WhatsApp and SMS deadline alerts.",
+    "notifyWhatsapp": "Receive urgent alerts on WhatsApp",
+    "notifySms": "Receive SMS text message alerts",
     "save": "Save Profile",
     "deleteData": "Delete My Data (Privacy Compliance)",
     "deleteConfirm": "Are you sure? This will permanently delete your profile and all received alerts."

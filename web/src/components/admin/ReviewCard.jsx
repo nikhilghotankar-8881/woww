@@ -9,13 +9,18 @@ import {
   FileText,
   Clock,
   ShieldCheck,
-  Send
+  Send,
+  MessageCircle,
+  MessageSquare,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
 export function ReviewCard({ change = {}, onApprove = () => {}, onReject = () => {} }) {
   const { t } = useTranslation();
   const [reviewNote, setReviewNote] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [showOutboundPreview, setShowOutboundPreview] = useState(false);
 
   const isGrounded = change.grounding === 'grounded';
   const isConflict = change.grounding === 'conflict';
@@ -107,6 +112,53 @@ export function ReviewCard({ change = {}, onApprove = () => {}, onReject = () =>
           Full Line Diff
         </span>
         <DiffView diff={change.diff || []} />
+      </div>
+
+      {/* Outbound WhatsApp & SMS Broadcast Preview */}
+      <div className="mb-5 border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+        <button
+          type="button"
+          onClick={() => setShowOutboundPreview(!showOutboundPreview)}
+          className="w-full px-4 py-2.5 flex items-center justify-between text-xs font-bold text-slate-700 hover:bg-slate-100 transition-colors"
+        >
+          <div className="flex items-center space-x-2">
+            <MessageCircle className="w-4 h-4 text-emerald-600" />
+            <MessageSquare className="w-4 h-4 text-blue-600" />
+            <span>Outbound Broadcast Preview (WhatsApp & SMS)</span>
+          </div>
+          {showOutboundPreview ? <ChevronUp className="w-4 h-4 text-slate-400" /> : <ChevronDown className="w-4 h-4 text-slate-400" />}
+        </button>
+
+        {showOutboundPreview && (
+          <div className="p-4 pt-2 border-t border-slate-200 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            {/* WhatsApp Card Preview */}
+            <div className="bg-[#E7F8ED] border border-emerald-300 rounded-lg p-3 text-slate-800 font-sans shadow-2xs">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 flex items-center space-x-1 mb-2">
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>WhatsApp Template Message</span>
+              </span>
+              <p className="font-bold text-emerald-950 mb-1">📢 शेतकरी सूचना सेतू | अधिकृत शासकीय सूचना बदल</p>
+              <p className="text-xs mb-1">🌾 <strong>योजना:</strong> {change.source_id?.toUpperCase()}</p>
+              <p className="text-xs mb-2">⚡ <strong>नवीन बदल:</strong> {change.summary}</p>
+              <div className="bg-white/80 p-2 rounded border border-emerald-200 text-[11px] text-emerald-900 mb-2">
+                🔗 अधिकृत पोर्टल: {change.source_id === 'pmkisan-home' ? 'https://pmkisan.gov.in/' : 'https://pmfby.gov.in/'}
+              </div>
+              <span className="text-[10px] text-slate-500 italic block">Delivered via WhatsApp Business Cloud API</span>
+            </div>
+
+            {/* SMS Message Preview */}
+            <div className="bg-white border border-slate-300 rounded-lg p-3 text-slate-800 font-mono shadow-2xs">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-800 flex items-center space-x-1 mb-2 font-sans">
+                <MessageSquare className="w-3.5 h-3.5" />
+                <span>SMS Alert (GSM-7 &lt; 160 Chars)</span>
+              </span>
+              <p className="text-xs leading-relaxed bg-slate-50 p-2.5 rounded border border-slate-200">
+                [शेतकरी सूचनासेतू] {change.source_id?.toUpperCase()}: {(change.summary || '').slice(0, 85)}. खात्री करा: pmkisan.gov.in
+              </p>
+              <span className="text-[10px] text-slate-500 italic block mt-2 font-sans">Delivered via Twilio / MSG91</span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Grounding Notes / Warnings */}

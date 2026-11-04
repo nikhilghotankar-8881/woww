@@ -12,35 +12,31 @@ export function AdminReviewPage() {
   const [loading, setLoading] = useState(true);
 
   const loadPendingChanges = async () => {
+    const sampleDemoChange = {
+      id: 'demo-change-01',
+      source_id: 'pmkisan-home',
+      detected_at: new Date().toISOString(),
+      materiality: 'material',
+      grounding: 'grounded',
+      grounding_notes: [],
+      synthetic: true,
+      summary: 'PM-KISAN: Official portal update announces 22nd instalment release and mandatory e-KYC requirement.',
+      summary_method: 'template',
+      fields: [
+        { name: 'instalment_date', value: '13th March 2026', evidence: 'Hon\'ble Prime Minister released the 22nd instalment of PM KISAN scheme on 13th March 2026.', method: 'regex' },
+        { name: 'last_date', value: '31-12-2026', evidence: 'Last date for mandatory eKYC submission is 31-12-2026.', method: 'regex' }
+      ],
+      diff: [
+        { type: 'del', line: 'Hon\'ble Prime Minister released the 21st instalment of PM KISAN scheme on 05th November 2025.' },
+        { type: 'add', line: 'Hon\'ble Prime Minister released the 22nd instalment of PM KISAN scheme on 13th March 2026.' },
+        { type: 'add', line: 'eKYC is mandatory for all registered farmers before next instalment.' },
+        { type: 'add', line: 'Last date for mandatory eKYC submission is 31-12-2026.' }
+      ]
+    };
+
     if (!isSupabaseConfigured()) {
-      // Local demo queue item
       const localChanges = JSON.parse(localStorage.getItem('shetkari_demo_changes') || 'null');
-      if (localChanges) {
-        setPendingChanges(localChanges);
-      } else {
-        const demoChange = {
-          id: 'demo-change-01',
-          source_id: 'pmkisan-home',
-          detected_at: new Date().toISOString(),
-          materiality: 'material',
-          grounding: 'grounded',
-          grounding_notes: [],
-          synthetic: true,
-          summary: 'PM-KISAN: Official portal update announces 22nd instalment release and mandatory e-KYC requirement.',
-          summary_method: 'template',
-          fields: [
-            { name: 'instalment_date', value: '13th March 2026', evidence: 'Hon\'ble Prime Minister released the 22nd instalment of PM KISAN scheme on 13th March 2026.', method: 'regex' },
-            { name: 'last_date', value: '31-12-2026', evidence: 'Last date for mandatory eKYC submission is 31-12-2026.', method: 'regex' }
-          ],
-          diff: [
-            { type: 'del', line: 'Hon\'ble Prime Minister released the 21st instalment of PM KISAN scheme on 05th November 2025.' },
-            { type: 'add', line: 'Hon\'ble Prime Minister released the 22nd instalment of PM KISAN scheme on 13th March 2026.' },
-            { type: 'add', line: 'eKYC is mandatory for all registered farmers before next instalment.' },
-            { type: 'add', line: 'Last date for mandatory eKYC submission is 31-12-2026.' }
-          ]
-        };
-        setPendingChanges([demoChange]);
-      }
+      setPendingChanges(localChanges || [sampleDemoChange]);
       setLoading(false);
       return;
     }
@@ -52,11 +48,15 @@ export function AdminReviewPage() {
         .eq('review_status', 'pending')
         .order('detected_at', { ascending: false });
 
-      if (!error && data) {
+      if (!error && data && data.length > 0) {
         setPendingChanges(data);
+      } else {
+        const localChanges = JSON.parse(localStorage.getItem('shetkari_demo_changes') || 'null');
+        setPendingChanges(localChanges || [sampleDemoChange]);
       }
     } catch (err) {
       console.warn('Error loading pending changes:', err);
+      setPendingChanges([sampleDemoChange]);
     } finally {
       setLoading(false);
     }

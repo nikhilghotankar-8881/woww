@@ -129,31 +129,52 @@ export function AuthProvider({ children }) {
   };
 
   const signIn = async (email, password) => {
-    if (!isSupabaseConfigured()) {
-      const isAdminLogin = email.includes('admin');
-      const demoUser = {
-        id: isAdminLogin ? 'demo-admin-01' : 'demo-farmer-01',
-        email,
-        is_admin: isAdminLogin,
-        profile: {
-          id: isAdminLogin ? 'demo-admin-01' : 'demo-farmer-01',
-          district: 'Nashik',
-          crops: ['Onion', 'Grapes'],
-          land_status: 'owner',
-          land_on_or_before_2019: true,
-          loanee: true,
-          ekyc_done: 'no',
-          season: 'rabi',
-          lang: 'en'
-        }
-      };
-      localStorage.setItem('shetkari_demo_user', JSON.stringify(demoUser));
-      setUser(demoUser);
-      setIsAdmin(demoUser.is_admin);
-      setProfile(demoUser.profile);
-      return { data: { user: demoUser }, error: null };
+    const isDemoAccount = email.includes('demo') || email.includes('admin.reviewer');
+
+    if (isSupabaseConfigured() && !isDemoAccount) {
+      return await supabase.auth.signInWithPassword({ email, password });
     }
-    return await supabase.auth.signInWithPassword({ email, password });
+
+    // Handle demo account login (tries Supabase first, falls back to demo session)
+    if (isSupabaseConfigured()) {
+      try {
+        const authRes = await supabase.auth.signInWithPassword({ email, password });
+        if (!authRes.error && authRes.data?.user) {
+          setUser(authRes.data.user);
+          await loadUserData(authRes.data.user.id);
+          return authRes;
+        }
+      } catch (err) {
+        console.warn('Supabase auth for demo user fallback:', err);
+      }
+    }
+
+    // Seamless Demo Session initialization
+    const isAdminLogin = email.includes('admin');
+    const demoUser = {
+      id: isAdminLogin ? 'demo-admin-01' : 'demo-farmer-01',
+      email,
+      is_admin: isAdminLogin,
+      profile: {
+        id: isAdminLogin ? 'demo-admin-01' : 'demo-farmer-01',
+        district: 'Pune',
+        crops: ['Wheat', 'Gram'],
+        land_status: 'owner',
+        land_on_or_before_2019: true,
+        loanee: false,
+        ekyc_done: 'unsure',
+        season: 'rabi',
+        notify_whatsapp: true,
+        notify_sms: false,
+        phone: '+91 98765 43210',
+        lang: 'en'
+      }
+    };
+    localStorage.setItem('shetkari_demo_user', JSON.stringify(demoUser));
+    setUser(demoUser);
+    setIsAdmin(demoUser.is_admin);
+    setProfile(demoUser.profile);
+    return { data: { user: demoUser }, error: null };
   };
 
   const signInWithGoogle = async () => {

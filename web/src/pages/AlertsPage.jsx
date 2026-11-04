@@ -18,35 +18,31 @@ export function AlertsPage() {
       return;
     }
 
-    if (!isSupabaseConfigured()) {
-      // Offline mock alert for demonstration
-      const localAlerts = JSON.parse(localStorage.getItem('shetkari_mock_alerts') || '[]');
-      if (localAlerts.length === 0) {
-        const sampleAlert = {
-          id: 'demo-alert-01',
-          user_id: user.id,
-          scheme_id: 'pm-kisan',
-          headline: 'PM-KISAN: Official notice updated: "Hon\'ble Prime Minister released 22nd instalment on 13th March 2026. e-KYC mandatory before next payment."',
-          match_state: 'MAY_APPLY',
-          reasons: ['e-KYC is mandatory to receive instalments; complete biometric or OTP verification.'],
-          created_at: new Date().toISOString(),
-          read_at: null,
-          changes: {
-            source_id: 'pmkisan-home',
-            synthetic: true,
-            detected_at: new Date().toISOString(),
-            diff: [
-              { type: 'del', line: 'Hon\'ble Prime Minister released the 21st instalment on 05th November 2025.' },
-              { type: 'add', line: 'Hon\'ble Prime Minister released the 22nd instalment on 13th March 2026.' },
-              { type: 'add', line: 'eKYC is mandatory for all registered farmers before next instalment.' },
-              { type: 'add', line: 'Last date for mandatory eKYC submission is 31-12-2026.' }
-            ]
-          }
-        };
-        setAlerts([sampleAlert]);
-      } else {
-        setAlerts(localAlerts);
+    const sampleAlert = {
+      id: 'demo-alert-01',
+      user_id: user.id,
+      scheme_id: 'pm-kisan',
+      headline: 'PM-KISAN: Official notice updated: "Hon\'ble Prime Minister released 22nd instalment on 13th March 2026. e-KYC mandatory before next payment."',
+      match_state: 'MAY_APPLY',
+      reasons: ['e-KYC is mandatory to receive instalments; complete biometric or OTP verification.'],
+      created_at: new Date().toISOString(),
+      read_at: null,
+      changes: {
+        source_id: 'pmkisan-home',
+        synthetic: true,
+        detected_at: new Date().toISOString(),
+        diff: [
+          { type: 'del', line: 'Hon\'ble Prime Minister released the 21st instalment on 05th November 2025.' },
+          { type: 'add', line: 'Hon\'ble Prime Minister released the 22nd instalment on 13th March 2026.' },
+          { type: 'add', line: 'eKYC is mandatory for all registered farmers before next instalment.' },
+          { type: 'add', line: 'Last date for mandatory eKYC submission is 31-12-2026.' }
+        ]
       }
+    };
+
+    if (!isSupabaseConfigured()) {
+      const localAlerts = JSON.parse(localStorage.getItem('shetkari_mock_alerts') || '[]');
+      setAlerts(localAlerts.length > 0 ? localAlerts : [sampleAlert]);
       setLoading(false);
       return;
     }
@@ -71,11 +67,16 @@ export function AlertsPage() {
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
 
-      if (!error && data) {
+      if (!error && data && data.length > 0) {
         setAlerts(data);
+      } else {
+        const localAlerts = JSON.parse(localStorage.getItem('shetkari_mock_alerts') || '[]');
+        setAlerts(localAlerts.length > 0 ? localAlerts : [sampleAlert]);
       }
     } catch (err) {
       console.warn('Error loading alerts:', err);
+      const localAlerts = JSON.parse(localStorage.getItem('shetkari_mock_alerts') || '[]');
+      setAlerts(localAlerts.length > 0 ? localAlerts : [sampleAlert]);
     } finally {
       setLoading(false);
     }

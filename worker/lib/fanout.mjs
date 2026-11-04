@@ -1,5 +1,6 @@
 // worker/lib/fanout.mjs
 import { matchProfileToScheme } from './match.mjs';
+import { dispatchOutboundAlerts } from './notify.mjs';
 
 /**
  * Fans out an approved change into personalized alerts for eligible farmer profiles.
@@ -77,25 +78,46 @@ export async function fanoutChange(changeId, supabaseClient) {
 
   // 4. Insert alerts in batch
   let insertedCount = 0;
+  const outboundQueue = [];
+
   if (alertsToInsert.length > 0) {
     const { data: inserted, error: insertErr } = await supabaseClient
       .from('alerts')
       .insert(alertsToInsert)
-      .select('id');
+      .select('id, user_id, scheme_id');
 
     if (insertErr) {
       throw new Error(`Failed to insert fanned out alerts: ${insertErr.message}`);
     }
     insertedCount = inserted?.length || alertsToInsert.length;
+
+    // Map inserted alerts to profiles for WhatsApp/SMS dispatch
+    for (const alt of (inserted || [])) {
+      const matchedProfile = profiles.find(p => p.id === alt.user_id);
+      if (matchedProfile && matchedProfile.phone) {
+        outboundQueue.push({
+          alertId: alt.id,
+          profile: matchedProfile,
+          schemeId: alt.scheme_id,
+          reasons: alertsToInsert.find(a => a.user_id === alt.user_id && a.scheme_id === alt.scheme_id)?.reasons || []
+        });
+      }
+    }
   }
 
-  // 5. Mark change as fanned out
+  // 5. Dispatch multi-channel outbound alerts (WhatsApp & SMS)
+  if (outboundQueue.length > 0) {
+    console.log(`[Fanout] Dispatching outbound WhatsApp/SMS notifications to ${outboundQueue.length} registered farmers...`);
+    await dispatchOutboundAlerts(outboundQueue, change, supabaseClient);
+  }
+
+  // 6. Mark change as fanned out
   await supabaseClient
     .from('changes')
     .update({ fanned_out_at: new Date().toISOString() })
     .eq('id', changeId);
 
-  console.log(`[Fanout] Change ${changeId} fanned out successfully: ${insertedCount} alerts generated.`);
+  console.log(`[Fanout] Change ${changeId} fanned out successfully: ${insertedCount} in-app alerts and outbound messages queued.`);
   return insertedCount;
 }
 

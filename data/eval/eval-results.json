@@ -60,8 +60,8 @@
     "n": 20,
     "synthetic": true,
     "metrics": {
-      "medianMs": 1.28,
-      "p95Ms": 3.72
+      "medianMs": 0.89,
+      "p95Ms": 1.84
     },
     "notes": "In-memory benchmark for normalize->diff->classify->extract->ground pipeline (excludes network I/O).",
     "git_sha": "local"
